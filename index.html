@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  #allcircles {
+    width: 36dvh;
+    position: absolute;
+    height: 10dvh;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 3;
+  }
+  .circle {
+    width: 10dvh;
+    height: 10dvh;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #132a60;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  .circle:hover {
+    background-color: #ffc145;
+  }
+  .email {
+    left: 0dvh;
+    background-image: url("email.png");
+  }
+  .email:hover {
+    background-image: url("emailhover.png");
+  }
+  .youtube:hover {
+    background-image: url("youtubehover.png");
+  }
+  .insta:hover {
+    background-image: url("instahover.png");
+  }
+  .youtube {
+    left: 13dvh;
+    background-image: url("youtube.png");
+  }
+  .insta {
+    right: 0dvh;
+    background-image: url("insta.png");
+  }
+  .iframe {
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: calc(100dvw - 20dvh);
+    max-width: 140dvh;
+    position: absolute;
+    height: calc((100dvw - 20dvh) * 0.5);
+    max-height: 70dvh;
+  }
+  .headerelement {
+    cursor: pointer;
+    outline: 0.5dvh solid white;
+    background-color: rgba(111, 51, 11, 1);
+    color: white;
+    position: fixed;
+    height: 3.5dvh;
+    text-align: center;
+    font-size: 3dvh;
+    z-index: 10000;
+    top: -5dvh;
+    padding: 0.5dvh;
+    transition: 1s top;
+  }
+  .headerelement:hover {
+    background-color: white;
+    color: rgb(111, 51, 11);
+  }
+  #headall {
+    top: 0;
+    left: 50%;
+    width: auto;
+    position: fixed;
+    transform: translate(-50%, 0%);
+    z-index: 10000;
+  }
+  .frcdesc {
+    position: absolute;
+    color: white;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    text-align: center;
+    font-size: 3.5dvh;
+    word-wrap: break-word;
+  }
+  #frcdesc {
+    position: absolute;
+    color: white;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    text-align: center;
+    font-size: 3.5dvh;
+    word-wrap: break-word;
+  }
+  #titlewhatis {
+    position: absolute;
+    top: 12dvh;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 6.5dvh;
+    word-wrap: break-word;
+  }
+  #joinsponsorscombined {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 6.5dvh;
+    transition: 0.3s font-size;
+  }
+  #joinsponsorscombined:hover {
+    font-size: 7dvh;
+  }
+   .learnhow {
+     cursor: pointer;
+     position: relative;
+     margin-left: 50%;
+     transform: translate(-50%, 0%);
+     background-color: #132a60;
+     color: #ffc145;
+     font-size: 3dvh;
+     padding: 1dvh;
+     width: 25dvh;
+     text-align: center;
+     margin-top: 1.5dvh;
+     border-radius: 2dvh;
+     z-index: 10;
+   }
+   .learnhow:hover {
+    background-color: #ffc145;
+     color: #132a60;
+  }
+    #wherelogosgo {
+      width: 100%;
+      overflow: hidden;
+      height: 30dvh;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      z-index: -1;
+    }
+
+    .blackhole {
+      width: 100%;
+      left: 0;
+      position: absolute;
+      z-index: 1;
+      background-color: #130901;
+    }
+
+    .hole {
+      height: 15dvh;
+      width: 100dvw;
+      left: 0;
+      position: absolute;
+      z-index: 2;
+    }
+
+    #blackgradient {
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      opacity: 0.8;
+      pointer-events: none;
+      background-image: linear-gradient(rgba(0, 0, 0, 0), black);
+    }
+
+    #else {
+      overflow: hidden;
+      width: 0;
+      background-image: url("fossils.png");
+      background-size: contain;
+      background-repeat: repeat-y;
+      background-color: #6f330b;
+      position: absolute;
+      top: 100dvh;
+      height: 1000dvh;
+      left: 0;
+    }
+
+    #fp {
+      background-image: url("sky.png");
+      background-position: 50% 50%;
+      background-size: cover;
+      overflow: hidden;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    #logo {
+      z-index: 4;
+      height: 40dvh;
+      width: auto;
+      position: absolute;
+      left: 50%;
+      transition: 2s top;
+      transform: translate(-50%, -50%);
+      top: calc(100% + 20dvh);
+    }
+
+    #blue, #green, #red, #yellow, #orange {
+      background-position: 50% 50%;
+      background-size: cover;
+      width: 100%;
+      left: 0;
+      position: absolute;
+    }
+
+    #blue {
+      background-image: url("level1.png");
+      z-index: 5;
+      bottom: -20dvh;
+      height: 20dvh;
+      transition: 1s bottom;
+    }
+
+    #green {
+      background-image: url("level2.png");
+      z-index: 3;
+      bottom: -40dvh;
+      height: 40dvh;
+      transition: 2s bottom;
+    }
+
+    #red {
+      background-image: url("level3.png");
+      z-index: 2;
+      bottom: -60dvh;
+      height: 60dvh;
+      transition: 3s bottom;
+    }
+
+    #yellow {
+      background-image: url("level4.png");
+      z-index: 1;
+      bottom: -80dvh;
+      height: 80dvh;
+      transition: 4s bottom;
+    }
+
+    #orange {
+      background-image: url("level5.png");
+      bottom: -100dvh;
+      height: 100dvh;
+      transition: 5s bottom;
+    }
+
+    .loopinglogo {
+      background-size: cover;
+      background-position: 50% 50%;
+      background-image: url("sponsors.png");
+      position: absolute;
+      transition: 1.5s left linear;
+    }
+    #picture {
+      left: 50%;
+    transform: translate(-50%, 0%);
+    width: calc(100dvw - 20dvh);
+    max-width: 140dvh;
+    position: absolute;
+    height: auto;
+    max-height: 70dvh;
+    z-index: 3;
+    }
+  </style>
+</head>
+<body onload="dotrans(); resizee()">
+  <div id="headall">
+    <a href="index.html"><div style="text-decoration: underline; border-radius: 0dvh 0dvh 0dvh 1dvh" class="headerelement selected">HOME</div></a>
+    <div class="headerelement selected">SPONSORSHIP</div>
+    <div class="headerelement selected">ACADEMICS</div>
+    <div style="border-radius: 0dvh 0dvh 1dvh 0dvh" class="headerelement selected">MATCHES</div>
+  </div>
+  <div id="fp">
+    <img id="logo" src="knightslogo.png">
+    <div style="background-image: url('blue.png')" id="blue"></div>
+    <div style="background-image: url('green.png')" id="green"></div>
+    <div style="background-image: url('red.png')" id="red"></div>
+    <div style="background-image: url('yellow.png')" id="yellow"></div>
+    <div style="background-image: url('orange.png')" id="orange"></div>
+  </div>
+  <div id="else">
+    <img style="top: 15dvh" class="hole" src="tophole.png">
+    <div class="blackhole" style="height: 55dvh; top: 22.5dvh">
+      <div id="joinsponsorscombined">
+      <div id="joinoursponsors">Join our Sponsors.</div>
+      <div class="learnhow">LEARN HOW</div>
+      </div>
+      <div id="wherelogosgo"></div>
+    </div>
+    <img style="top: 69.5dvh" class="hole" src="bottomhole.png">
+    <img style="top: 100dvh" class="hole" src="tophole.png">
+    <div class="blackhole" style="height: 200dvh; top: 107.5dvh">
+      
+      <div id="titlewhatis">What exactly is highschool robotics?</div>
+      <div style="width: 90%" id="frcdesc">
+        In FRC (First™ Robotics Competition), teams of student-built and student-programmed robots compete in teams of threes to score points on a competition field the size of an average high school basketball court.
+        <br><br>
+        <span style="color: #ffc145; font-size: 5dvh">This is MJ, our robot.</span>
+      </div>
+      
+      <iframe class="iframe"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+<iframe class="iframe"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+      <span class="frcdesc">Here's a video showing one of our matches from last year.</span>
+      
+      </div>
+    <img style="top: 300dvh" class="hole" src="bottomhole.png">
+    <div class="frcdesc" style="white-space: nowrap; font-size: 4.5dvh; z-index: 3;">Support our <span style="color: #ffc145">Innovation:</span><br><br><br><br>Contact Us:</div>
+    <div id="allcircles">
+      <a href="mailto: zdean@nrcaknights.com"><div class="circle email"></div></a>
+      <a href="https://www.youtube.com/@nrcarobotics"><div class="circle youtube"></div></a>
+      <a href="https://www.instagram.com/nrcaknightsrobotics/"><div class="circle insta"></div></a>
+    </div>
+    <div class="learnhow">DONATE NOW</div>
+    <div id="blackgradient"></div>
+    <img src="teamphoto.png" id="picture"></img>
+  </div>
+  <script>
+    function resizee() {
+      window.innerHeight;
+      document.getElementById("frcdesc").style.top = 0.13 * window.innerHeight + document.getElementById("titlewhatis").offsetHeight + "px";
+      document.getElementsByClassName("iframe")[0].style.top = 0.18 * window.innerHeight + document.getElementById("titlewhatis").offsetHeight + document.getElementById("frcdesc").offsetHeight + "px";
+      document.getElementsByClassName("frcdesc")[0].style.top = 0.23 * window.innerHeight + document.getElementById("titlewhatis").offsetHeight + document.getElementById("frcdesc").offsetHeight + document.getElementsByClassName("iframe")[0].offsetHeight + "px";
+      document.getElementsByClassName("iframe")[1].style.top = 0.28 * window.innerHeight + document.getElementById("titlewhatis").offsetHeight + document.getElementById("frcdesc").offsetHeight + document.getElementsByClassName("iframe")[0].offsetHeight + document.getElementsByClassName("frcdesc")[0].offsetHeight + "px";
+      document.getElementsByClassName("blackhole")[1].style.height = 0.41 * window.innerHeight + document.getElementById("titlewhatis").offsetHeight + document.getElementById("frcdesc").offsetHeight + document.getElementsByClassName("iframe")[0].offsetHeight + document.getElementsByClassName("frcdesc")[0].offsetHeight + document.getElementsByClassName("iframe")[1].offsetHeight + "px";
+      document.getElementsByClassName("hole")[3].style.top = 1.41 * window.innerHeight + document.getElementById("titlewhatis").offsetHeight + document.getElementById("frcdesc").offsetHeight + document.getElementsByClassName("iframe")[0].offsetHeight + document.getElementsByClassName("frcdesc")[0].offsetHeight + document.getElementsByClassName("iframe")[1].offsetHeight + "px";
+      
+      document.getElementsByClassName("frcdesc")[1].style.top = document.getElementsByClassName("blackhole")[1].offsetHeight + 1.2 * window.innerHeight + "px";
+      document.getElementsByClassName("learnhow")[1].style.top = document.getElementsByClassName("blackhole")[1].offsetHeight + 1.255 * window.innerHeight + "px";
+      document.getElementById("allcircles").style.top = document.getElementsByClassName("blackhole")[1].offsetHeight + 1.48 * window.innerHeight + "px";
+      document.getElementsByClassName("headerelement")[0].style.left = 0 + "px";
+      document.getElementsByClassName("headerelement")[1].style.left = document.getElementsByClassName("headerelement")[0].offsetWidth + 0.005 * window.innerHeight + "px";
+      document.getElementsByClassName("headerelement")[2].style.left = document.getElementsByClassName("headerelement")[0].offsetWidth + document.getElementsByClassName("headerelement")[1].offsetWidth + 0.01 * window.innerHeight + "px";
+      document.getElementsByClassName("headerelement")[3].style.left = document.getElementsByClassName("headerelement")[0].offsetWidth + document.getElementsByClassName("headerelement")[1].offsetWidth + document.getElementsByClassName("headerelement")[2].offsetWidth + 0.015 * window.innerHeight + "px";
+      document.getElementById("headall").style.width = document.getElementsByClassName("headerelement")[0].offsetWidth + document.getElementsByClassName("headerelement")[1].offsetWidth + document.getElementsByClassName("headerelement")[2].offsetWidth + document.getElementsByClassName("headerelement")[3].offsetWidth + 0.015 * window.innerHeight + "px"
+      document.getElementById("picture").style.top = document.getElementsByClassName("blackhole")[1].offsetHeight + 1.67 * window.innerHeight + "px";
+    
+      document.getElementById("else").style.height = document.getElementsByClassName("blackhole")[1].offsetHeight + document.getElementById("picture").offsetHeight + 1.73 * window.innerHeight + "px";
+    }
+    
+    resizee();
+    window.addEventListener("resize", resizee) 
+    function dotrans() {
+      if (localStorage.getItem("transition") != "1") {
+        localStorage.setItem("transition", "1");
+        document.getElementById("blue").style.bottom = "0";
+        document.getElementById("green").style.bottom = "0";
+        document.getElementById("red").style.bottom = "0";
+        document.getElementById("yellow").style.bottom = "0";
+        document.getElementById("orange").style.bottom = "0";
+        setTimeout(function() {
+          document.getElementById("logo").style.top = "50%";
+          document.getElementsByClassName("headerelement")[0].style.top = "0";
+        }, 5000);
+        setTimeout(function() {
+          document.getElementsByClassName("headerelement")[1].style.top = "0";
+        }, 5500);
+        setTimeout(function() {
+          document.getElementsByClassName("headerelement")[2].style.top = "0";
+        }, 6000);
+        setTimeout(function() {
+          document.getElementsByClassName("headerelement")[3].style.top = "0";
+        }, 6500);
+        setTimeout(function () {
+          document.getElementById("else").style.width = "100%";
+        }, 7500);
+      } else {
+        const elements = ["blue", "green", "red", "yellow", "orange"];
+        elements.forEach(id => {
+          const el = document.getElementById(id);
+          el.style.transition = "none";
+          void el.offsetWidth;
+          el.style.bottom = "0";
+        });
+        document.getElementsByClassName("headerelement")[0].style.transition = "none";
+        document.getElementsByClassName("headerelement")[1].style.transition = "none";
+        document.getElementsByClassName("headerelement")[2].style.transition = "none";
+        document.getElementsByClassName("headerelement")[3].style.transition = "none";
+        window.innerHeight;
+        document.getElementsByClassName("headerelement")[0].style.top = "0";
+        document.getElementsByClassName("headerelement")[1].style.top = "0";
+        document.getElementsByClassName("headerelement")[2].style.top = "0";
+        document.getElementsByClassName("headerelement")[3].style.top = "0";
+        document.getElementById("logo").style.transition = "none";
+        void document.getElementById("logo").offsetWidth;
+        document.getElementById("logo").style.top = "50%";
+        document.getElementById("else").style.width = "100%";
+      }
+    }
+
+    const sizeheight = 0.25 / 3;
+    const size = 0.2;
+    const spacing = 0.025 + size;
+    const numtomake = Math.floor((window.innerHeight * 4) / (window.innerHeight * spacing)) + 2;
+    const moveAmount = spacing * window.innerHeight;
+
+    let wtrl = "0px";
+    let wtrr = "0px";
+    let nmleft = 0;
+    let nmright = numtomake - 1;
+
+    initializeLoopingLogos();
+
+    function initializeLoopingLogos() {
+      for (let a = 0; a < 3; a++) {
+        for (let i = 0; i < numtomake; i++) {
+          const leftPos = (((i - (numtomake / 2)) * spacing) + 0.5) * window.innerHeight;
+
+          if (i === 0) wtrr = leftPos + "px";
+          if (i === numtomake - 1) wtrl = leftPos + "px";
+
+          let newDiv = document.createElement("div");
+          newDiv.classList.add("loopinglogo", "level" + a);
+          newDiv.style.width = (size * window.innerHeight) + "px";
+          newDiv.style.height = (sizeheight * window.innerHeight) + "px";
+          newDiv.style.top = (a * (0.025 + sizeheight) * window.innerHeight) + "px";
+          newDiv.style.left = leftPos + "px";
+
+          document.getElementById("wherelogosgo").appendChild(newDiv);
+        }
+      }
+    }
+        otr = numtomake - 1;
+
+  pushFrd();
+  setInterval(pushFrd, 1500);
+
+    function pushFrd() {
+      if (otr <= 0) {
+        otr = 0;
+      } else {
+        otr--;
+      }
+      document.getElementsByClassName("level0")[0].remove();
+      document.getElementsByClassName("level1")[otr].remove();
+      document.getElementsByClassName("level2")[0].remove();
+      for (a = 0; a < 3; a++) {
+      let newDiv = document.createElement("div");
+      newDiv.classList.add("loopinglogo", "level" + a);
+      newDiv.style.width = (size * window.innerHeight) + "px";
+      newDiv.style.height = (sizeheight * window.innerHeight) + "px";
+      newDiv.style.top = (a * (0.025 + sizeheight) * window.innerHeight) + "px";
+      if (a == 0 || a == 2) {
+        newDiv.style.left = wtrl;
+      } else {
+        newDiv.style.left = wtrr;
+      }
+      document.getElementById("wherelogosgo").appendChild(newDiv);
+      }
+      for (i = 0; i < numtomake; i++) {
+          document.getElementsByClassName("level0")[i].style.left = document.getElementsByClassName("level0")[i].offsetLeft - ((size + 0.025) * window.innerHeight) + "px";
+        }
+      for (i = 0; i < numtomake; i++) {
+          document.getElementsByClassName("level1")[i].style.left = document.getElementsByClassName("level1")[i].offsetLeft + ((size + 0.025) * window.innerHeight) + "px";
+        }
+      for (i = 0; i < numtomake; i++) {
+          document.getElementsByClassName("level2")[i].style.left = document.getElementsByClassName("level2")[i].offsetLeft - ((size + 0.025) * window.innerHeight) + "px";
+        }
+    }
+  </script>
+</body>
+</html>
