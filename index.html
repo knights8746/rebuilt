@@ -10,6 +10,13 @@
   <meta name="author" content="Knights-Team #8746">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+  @font-face {
+    src: url("Fontspring-DEMO-integralcf-medium.otf");
+    font-family: integral;
+  }
+  body {
+    font-family: integral;
+  }
   #allcircles {
     width: 36dvh;
     position: absolute;
@@ -344,6 +351,7 @@ src="https://www.youtube.com/embed/tgbNymZ7vqY">
     <img src="teamphoto.png" id="picture"></img>
   </div>
   <script>
+    localStorage.setItem("transition", "0");
     function resizee() {
       window.innerHeight;
       document.getElementById("frcdesc").style.top = 0.13 * window.innerHeight + document.getElementById("titlewhatis").offsetHeight + "px";
