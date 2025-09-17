@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+  </head>
+  <body onload="resizee(); dotrans()">
+    <div id="headall">
+    <a href="index.html"><div style="border-radius: 0dvh 0dvh 0dvh 1dvh" class="headerelement selected">HOME</div></a>
+    <a href="sponsorship.html"><div style="text-decoration: underline" class="headerelement selected">SPONSORSHIP</div></a>
+    <a href="https://www.nrcaknights.com/"><div class="headerelement selected">ACADEMICS</div></a>
+    <a href="matches.html"><div style="border-radius: 0dvh 0dvh 1dvh 0dvh" class="headerelement selected">MATCHES</div></a>
+  </div>
+    <div id="else">
+    <span id="title"><span id="centerthis">SPONSORSHIP</span></span>
+    <div id="bblak"></div>
+    <div id="blackgradient"></div>
+    <img style="top: 18.5dvh" class="hole" src="tophole.png">
+    <img style="top: 66.5dvh" class="hole" src="bottomhole.png">
+    <img style="top: 100dvh" class="hole" src="tophole.png">
+    <img class="hole" src="bottomhole.png">
+    <div style="height: 100dvh; top: 107.5dvh" class="blackhole">
+      <span id="bhtitle" style="top: 10dvh; position: absolute; left: 0; width: 100%; font-size: 5.5dvh; line-height: 5.5dvh">WHERE IS YOUR MONEY GOING?</span>
+      <!-- Block 1: image left -->
+<div class="content-block" style="clear: both; margin-top: 0; padding: 2dvh 5dvh; text-align: right">
+  <img src="crystals1.png" class="content-image left">
+  <div class="content-text">
+    <h2>Why fundraise?</h2>
+    <p>As a sponsor, you will play a vital role in helping our team achieve its goals for the upcoming FRC season. Your support will have a significant impact on several aspects of our program.</p>
+  </div>
+</div>
+
+<!-- Block 2: image right -->
+<div class="content-block" style="clear: both; margin-top: 0; padding: 2dvh 5dvh;">
+  <img src="crystals2.png" class="content-image right">
+  <div class="content-text">
+    <h2>Technical Innovation</h2>
+    <p>By contributing to our team, your help wil allow us to access materials and technology that will ensure that our entry for the FRC competition will be a robot that can compete at the highest level.</p>
+  </div>
+</div>
+
+<!-- Block 3: image left -->
+<div class="content-block" style="clear: both; margin-top: 0; padding: 2dvh 2dvh; text-align: right">
+  <img src="crystals3.png" class="content-image left">
+  <div class="content-text">
+    <h2>STEM Education</h2>
+    <p>As a sponsor, you will also support the spread of STEM education among the younger community. Donating will help us organize summer camps, events, and presentations.</p>
+  </div>
+</div>
+
+<!-- Block 4: image right -->
+<div class="content-block" style="clear: both; margin-top: 0; padding: 2dvh 5dvh;">
+  <img src="crystals4.png" class="content-image right">
+  <div class="content-text">
+    <h2>Professional Development</h2>
+    <p>With your contribution, students will be gaining important life skills in leadership, organization, and time management. Your help supports young leaders with skills that will help them in their career paths.</p>
+  </div>
+</div>
+
+<!-- Block 5: image left -->
+<div class="content-block" style="clear: both; margin-top: 0; padding: 2dvh 5dvh; text-align: right">
+  <img src="crystals5.png" class="content-image left">
+  <div class="content-text">
+    <h2>Competition Success</h2>
+    <p>Your donation helps us attend regional and national competitions, where we can display your commitment and our dedication to FIRST Roboics ideals.</p>
+  </div>
+</div>
+    </div>
+    <span class="aos">As our sponsor,</span>
+    <span id="aossubtext">We would like to recognize your contribution appropriately. If you choose to become a sponsor, we are more than happy to prominently display your company name and logo on our robot, team shirts, and promotional materials. Additionally, we offer personalized sponsorship benefits, tailored to your company. We are open to discussing a package that aligns with your business's objectives and expectations.</span>
+    <span style="color: #ffc145" class="aos">Have More Questions?</span>
+    <div class="learnhow">EMAIL US</div>
+    <span style="color: #ffc145" class="aos">Ready to Sponsor?</span>
+    <div class="learnhow">DONATE NOW</div>
+    </div>
+  </body>
+  <style>
+    .headerelement {
+    cursor: pointer;
+    outline: 0.5dvh solid white;
+    background-color: rgba(111, 51, 11, 1);
+    color: white;
+    position: fixed;
+    height: 3.5dvh;
+    text-align: center;
+    font-size: 3dvh;
+    z-index: 10000;
+    top: -5dvh;
+    padding: 0.5dvh;
+    transition: 1s top;
+  }
+  .headerelement:hover {
+    background-color: white;
+    color: rgb(111, 51, 11);
+  }
+  #headall {
+    top: 0;
+    left: 50%;
+    width: auto;
+    position: fixed;
+    transform: translate(-50%, 0%);
+    z-index: 10000;
+  }
+.learnhow {
+     cursor: pointer;
+     position: relative;
+     margin-left: 50%;
+     transform: translate(-50%, 0%);
+     background-color: #132a60;
+     color: #ffc145;
+     font-size: 3dvh;
+     padding: 1dvh;
+     width: 25dvh;
+     text-align: center;
+     margin-top: 1.5dvh;
+     border-radius: 2dvh;
+     z-index: 10;
+   }
+   .learnhow:hover {
+    background-color: #ffc145;
+     color: #132a60;
+  }
+.aos {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  white-space: nowrap;
+  color: white;
+  left: 0;
+  font-size: 5dvh;
+}
+#aossubtext {
+  position: absolute;
+  left: 5dvh;
+  width: calc(100% - 10dvh);
+  text-align: center;
+  color: white;
+  font-size: 2.5dvh;
+}
+.content-block {
+  word-wrap: break-word;
+  text-align: left;
+  width: 90%;
+  margin: auto;
+  overflow: hidden; /* clear floats */
+  color: white;
+  font-family: "Archivo Black";
+}
+
+.content-image {
+  width: 20dvh;
+  height: 20dvh;
+  margin: 2dvh 2dvh 2dvh 0;
+  shape-outside: circle(50%);
+  -webkit-shape-outside: circle(50%);
+  float: left;
+  object-fit: cover;
+}
+
+.content-image.right {
+  float: right;
+  margin: 2dvh 0 2dvh 2dvh;
+}
+
+.content-text {
+  font-size: 2.5dvh;
+  line-height: 3dvh;
+}
+
+.content-text h2 {
+  font-size: 4dvh;
+  margin-bottom: 0.5dvh;
+}
+    body {
+      font-family: "Archivo Black";
+    }
+    #bblak {
+      width: 100dvw;
+      height: 48dvh;
+      position: absolute;
+      left: 50%;
+      top: 50dvh;
+      transform: translate(-50%, -50%);
+      background-color: #130901;
+      z-index: 1;
+    }
+    .hole {
+      height: 15dvh;
+      width: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      z-index: 3;
+    }
+    .blackhole {
+      color: white;
+      text-align: center;
+      width: 100%;
+      left: 0;
+      position: absolute;
+      z-index: 1;
+      background-color: #130901;
+    }
+    #title {
+      z-index: 2;
+      font-size: 100%;
+      color: white;
+      position: absolute;
+      left: 50%;
+      top: 50dvh;
+      width: 100%;
+      height: 40dvw;
+      max-height: 48dvh;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      background-color: #130901;
+    }
+    #centerthis {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    #else {
+      overflow: hidden;
+      width: 100%;
+      background-image: url("fossils.png");
+      background-size: contain;
+      background-repeat: repeat-y;
+      background-color: #6f330b;
+      position: absolute;
+      top: 0;
+      height: 1000dvh;
+      left: 0;
+    }
+    #blackgradient {
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      opacity: 0.8;
+      pointer-events: none;
+      background-image: linear-gradient(rgba(0, 0, 0, 0), black);
+    }
+  </style>
+  <script>
+    function dotrans() {
+      setTimeout(function() {
+           document.getElementsByClassName("headerelement")[0].style.top = "0";
+        }, 0);
+        setTimeout(function() {
+          document.getElementsByClassName("headerelement")[1].style.top = "0";
+        }, 500);
+        setTimeout(function() {
+          document.getElementsByClassName("headerelement")[2].style.top = "0";
+        }, 1000);
+        setTimeout(function() {
+          document.getElementsByClassName("headerelement")[3].style.top = "0";
+        }, 1500);
+    }
+    window.addEventListener("resize", resizee);
+    function resizee() {
+      document.getElementsByClassName("headerelement")[0].style.left = 0 + "px";
+      document.getElementsByClassName("headerelement")[1].style.left = document.getElementsByClassName("headerelement")[0].offsetWidth + 0.005 * window.innerHeight + "px";
+      document.getElementsByClassName("headerelement")[2].style.left = document.getElementsByClassName("headerelement")[0].offsetWidth + document.getElementsByClassName("headerelement")[1].offsetWidth + 0.01 * window.innerHeight + "px";
+      document.getElementsByClassName("headerelement")[3].style.left = document.getElementsByClassName("headerelement")[0].offsetWidth + document.getElementsByClassName("headerelement")[1].offsetWidth + document.getElementsByClassName("headerelement")[2].offsetWidth + 0.015 * window.innerHeight + "px";
+      document.getElementById("headall").style.width = document.getElementsByClassName("headerelement")[0].offsetWidth + document.getElementsByClassName("headerelement")[1].offsetWidth + document.getElementsByClassName("headerelement")[2].offsetWidth + document.getElementsByClassName("headerelement")[3].offsetWidth + 0.015 * window.innerHeight + "px"
+      document.getElementById("title").style.fontSize = document.getElementById("title").offsetHeight * 0.27 + "px";
+      document.getElementsByClassName("content-block")[0].style.marginTop = document.getElementById("bhtitle").offsetHeight + 0.14 * window.innerHeight + "px";
+      th = 0;
+      for (i = 0; i < 5; i++) {
+        th += document.getElementsByClassName("content-block")[i].offsetHeight;
+      }
+      document.getElementsByClassName("blackhole")[0].style.height = th + 0.315 * window.innerHeight + "px";
+      document.getElementsByClassName("hole")[3].style.top = th + 1.315 * window.innerHeight + "px";
+      document.getElementsByClassName("aos")[0].style.top = th + 1.5 * window.innerHeight + "px";
+      th += document.getElementsByClassName("aos")[0].offsetHeight;
+      document.getElementById("aossubtext").style.top = th + 1.5 * window.innerHeight + "px";
+      th += document.getElementById("aossubtext").offsetHeight;
+      document.getElementsByClassName("aos")[1].style.top = th + 1.55 * window.innerHeight + "px";
+      th += document.getElementsByClassName("aos")[1].offsetHeight;
+      document.getElementsByClassName("learnhow")[0].style.top = th + 1.55 * window.innerHeight + "px";
+      th += document.getElementsByClassName("learnhow")[0].offsetHeight;
+      document.getElementsByClassName("aos")[2].style.top = th + 1.63 * window.innerHeight + "px";
+      th += document.getElementsByClassName("aos")[2].offsetHeight;
+      document.getElementsByClassName("learnhow")[1].style.top = th + 1.555 * window.innerHeight + "px";
+      th += document.getElementsByClassName("learnhow")[1].offsetHeight;
+      document.getElementById("else").style.height = th + 1.78 * window.innerHeight + "px";
+    }
+  </script>
+</html>
